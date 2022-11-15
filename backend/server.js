@@ -3,10 +3,13 @@
 // dotenv: So we can have an environment variable
 // port: the port we want our server to run on
 const express = require("express");
+const colors = require("colors");
 const dotenv = require("dotenv").config();
 const { errorHandler } = require("./middleware/errorMiddleware");
+const connectDB = require("./config/db");
 const port = process.env.PORT || 5000;
 
+connectDB();
 // We need to initialize express
 const app = express();
 
