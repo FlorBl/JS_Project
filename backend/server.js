@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Now If we hit --> /api/goals to look in our routes/goalRoutes file, and inside the other file all we need is the --> / because the rest of the url was specified here
 app.use("/api/goals", require("./routes/goalRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 
 app.use(errorHandler);
 
